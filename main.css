@@ -9,7 +9,7 @@ html {
 }
 
 .bgimg {
-    background-image: url(images/redPanda.jpg);
+    background-image: url(images/bgPlaceholder.jpg);
     min-height: 100%;
     background-position: center;
     background-size: cover;
