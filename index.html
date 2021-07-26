@@ -1,27 +1,247 @@
 <!DOCTYPE html>
-<html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="main.css">
+<html lang="en">
 
-<body>
+<head>
+  <title>Little Lion Workshop</title>
 
-    <div class="bgimg w3-display-container w3-animate-opacity w3-text-black">
-        <div class="w3-display-topleft w3-padding-large w3-xlarge">
-            <img src="images/LLLW-Web_Tag.jpg" height="10%">
-        </div>
-        <div class="w3-display-middle">
-            <h1 class="w3-large w3-animate-top">WE'RE MAKING SOME CHANGES!</h1>
-            <hr class="w3-border-grey" style="margin:auto;width:100%">
-            <p class="w3-large w3-left">We're currently updating our website.<br>If you'd like to connect with use, please DM us on Instagram, Facebook or email us at: <br><br>littlelion.workshop@gmail.com.<br><br>We look forward to hearing from you!</p>
-        </div>
-        <div class="w3-display-bottomleft w3-padding-large">
-            Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-        </div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="/css/home.css">
+
+  <!--info for favicon below-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!--end favicon-->
+</head>
+
+
+<body class="w3-light-grey">
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+    <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a>
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">PORTFOLIO</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">ABOUT US</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CONTACT</a>
+    <a href="javascript:void()" onclick="mBtn()" class="w3-bar-item w3-button w3-center w3-padding-16">MEASUREMENT FORM</a>
+  </nav>
+
+  <!-- Top menu on small screens -->
+  <header class="w3-container w3-top w3-white w3-xlarge w3-padding-small">
+    <span class="w3-left w3-padding-small"> <img src="/images/LLW_Web2021.jpg" alt="Little Lion Workshop" width="500" height="auto"> </span>
+
+    <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+  </header>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main w3-content" style="max-width:1600px;margin-top:120px">
+
+    <!-- Photo grid -->
+    <div class="w3-row w3-grayscale-min">
+      <div class="w3-quarter">
+        <img src="/images/12Photos/1.jpg" style="width:100%" onclick="onClick(this)" alt="Sora - Kingdom hearts">
+        <img src="/images/12Photos/2.jpg" style="width:100%" onclick="onClick(this)" alt="Korra - The Legend of Korra">
+        <img src="/images/12Photos/3.jpg" style="width:100%" onclick="onClick(this)" alt="Kira - The Dark Crystal">
+      </div>
+
+      <div class="w3-quarter">
+        <img src="/images/12Photos/4.jpg" style="width:100%" onclick="onClick(this)" alt="Trevor Belmont - Castlevania">
+        <img src="/images/12Photos/5.jpg" style="width:100%" onclick="onClick(this)" alt="Sypha - Castlevania">
+        <img src="/images/12Photos/6.jpg" style="width:100%" onclick="onClick(this)" alt="Vixen - Riverdale">
+      </div>
+
+      <div class="w3-quarter">
+        <img src="/images/12Photos/7.jpg" style="width:100%" onclick="onClick(this)" alt="Teferi - Magic The Gathering">
+        <img src="/images/12Photos/8.jpg" style="width:100%" onclick="onClick(this)" alt="Aisha - Winx">
+        <img src="/images/12Photos/9.jpg" style="width:100%" onclick="onClick(this)" alt="Jade - Mortal Kombat">
+      </div>
+
+      <div class="w3-quarter">
+        <img src="/images/12Photos/10.jpg" style="width:100%" onclick="onClick(this)" alt="Mimi - Perfect Blue">
+        <img src="/images/12Photos/11.jpg" style="width:100%" onclick="onClick(this)" alt="Starfire - Injustice 2">
+        <img src="/images/12Photos/12.jpg" style="width:100%" onclick="onClick(this)" alt="Tylee - Avatar The Last Airbender">
+      </div>
     </div>
+
+    <!-- Pagination
+    <div class="w3-center w3-padding-32">
+      <div class="w3-bar">
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+        <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+      </div>
+    </div>
+-->
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+      </div>
+    </div>
+
+    <!-- About section -->
+    <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32 w3-margin-top" id="about">
+      <h4><b>About LLW</b></h4>
+      <img src="/images/AboutUs.png" alt="Curtis and Victoria" class="w3-image w3-padding-32" width="600" height="650">
+      <div class="w3-content w3-justify" style="max-width:600px">
+        <h4>Thanks for stopping in!</h4>
+        <p>Welcome to our tiny workshop! Victoria is a professionally trained costume designer and Curtis has a degree in electronics engineering.
+          Together we’ve designed and built costumes and props for over 80 cosplays, and over 70 theatre and film
+          shows since 2011.
+          <br>
+
+          <br>In 2020, with help of family, friends and youtube we built a 28 ft tiny house, and have been crafting in it since. Today in our 240 sq ft home, we are focussing our skills on creating high-quality, custom-built, sewing-focussed cosplay
+          commissions, and 3D printed small props, and accessories.
+          We’re so grateful to have worked with so many incredibly kind, creative, authentic cosplayers around the world, and we would love to make your next project come to life!
+        </p>
+        <hr class="w3-opacity">
+
+        <p class="w3-center"><button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom w3-hover-black" onclick="mBtn()">Measurement
+            Form</button></p>
+
+        <hr class="w3-opacity">
+
+        <h4 class="w3-center w3-padding-16">What's Included</h4>
+        <div class="w3-row-padding" style="margin:0 -16px">
+
+          <div class="w3-third w3-margin-bottom">
+            <ul class="w3-ul w3-white w3-center">
+              <li class="w3-black w3-xlarge w3-padding-32">1-0n-1 Video Measurements</li>
+              <li class="w3-padding-16">Private Web Call</li>
+              <li class="w3-padding-16">Guided Measurement Process</li>
+              <li class="w3-padding-16">Access to your Measurements</li>
+            </ul>
+          </div>
+
+          <div class="w3-third">
+            <ul class="w3-ul w3-white w3-center">
+              <li class="w3-black w3-xlarge w3-padding-32">Custom Tailored</li>
+              <li class="w3-padding-16">Based on your specific measurements</li>
+              <li class="w3-padding-16">Scaled to your size</li>
+              <li class="w3-padding-16">Constructed with your needs in mind</li>
+              <li class="w3-padding-16">Handmade in Canada</li>
+            </ul>
+          </div>
+
+          <div class="w3-third">
+            <ul class="w3-ul w3-white w3-center">
+              <li class="w3-black w3-xlarge w3-padding-32">All Humans Welcome</li>
+              <li class="w3-padding-16">We love you for you!</li>
+              <li class="w3-padding-16">LGBTQIA+ <br>Inclusive</li>
+              <li class="w3-padding-16">All/Plus sizes Welcome</li>
+
+            </ul>
+          </div>
+        </div>
+        <p class="w3-center"><button onclick="etsyBtn()" class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom w3-hover-black">Shop Here</button></p>
+      </div>
+      <p class="w3-center">Have something super special in mind? Want to save on Etsy fees? Contact us directly in the form below, we love having conversations with our clients!</p>
+    </div>
+
+    <!-- Contact section -->
+    <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+      <div class="w3-content" style="max-width:600px">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6vUdXvuFot65IivLp00WuVqHaXnHUWvSBWfP8gufWAanuAg/viewform?embedded=true" width="600" height="1600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-32 w3-grey">
+      <div class="w3-row-padding">
+        <div class="w3-third">
+          <h3>SHOP</h3>
+          <ul class="w3-ul">
+            <li class="w3-padding-16 w3-hover-black">
+              <a href="https://www.etsy.com/LittleLionWorkshop/" target="_blank" rel="noopener">
+                <img src="/images/Etsy.png" class="w3-left w3-margin-right" style="width:50px">
+                <span class="w3-large">ETSY</span><br>
+                <span>Find our costumes here!</span></a>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="w3-third">
+          <h3>SOCIAL</h3>
+          <ul class="w3-ul">
+            <li class="w3-padding-16 w3-hover-black">
+              <a href="https://www.instagram.com/littlelionworkshop/" target="_blank" rel="noopener">
+                <img src="/images/Instagram.png" class="w3-left w3-margin-right" style="width:50px">
+                <span class="w3-large">INSTAGRAM</span><br>
+                <span>Check out our in progress projects</span></a>
+            </li>
+
+
+          </ul>
+        </div>
+
+        <div class="w3-third">
+
+          <ul class="w3-ul">
+            <h3>CONNECT</h3>
+            <li class="w3-padding-16 w3-hover-black">
+              <a href="https://www.facebook.com/LittleLionWorkshop/" target="_blank" rel="noopener">
+                <img src="/images/Facebook.png" class="w3-left w3-margin-right" style="width:50px">
+                <span class="w3-large">FACEBOOK</span><br>
+                <span>Check out our most recent updates</span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+
+    <!-- End page content -->
+  </div>
+
+  <script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
+    function mBtn() {
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSdeCT549iCmtLEZH0Gvjcg8M9PblOREsYHh3eJlv2yfiDwUKg/viewform?usp=sf_link");
+    }
+
+    function etsyBtn() {
+      window.open("www.etsy.com/littlionworkshop")
+    }
+  </script>
+
 
 </body>
 
