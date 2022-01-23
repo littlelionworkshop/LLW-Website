@@ -96,18 +96,7 @@
       </div>
     </div>
 
-    <!-- Pagination
-    <div class="w3-center w3-padding-32">
-      <div class="w3-bar">
-        <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-        <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-      </div>
-    </div>
--->
+
     <!-- Modal for full size images on click-->
     <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
       <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
@@ -132,12 +121,7 @@
           commissions, and 3D printed small props, and accessories.
           We’re so grateful to have worked with so many incredibly kind, creative, authentic cosplayers around the world, and we would love to make your next project come to life!
         </p>
-        <hr class="w3-opacity">
-
-        <p class="w3-center"><button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom w3-hover-black" onclick="mBtn()">Measurement
-            Form</button></p>
-
-        <hr class="w3-opacity">
+        <hr id="contact" class="w3-opacity">
 
         <h4 class="w3-center w3-padding-16">What's Included</h4>
         <div class="w3-row-padding" style="margin:0 -16px">
@@ -172,16 +156,21 @@
           </div>
         </div>
         <p class="w3-center"><button onclick="etsyBtn()" class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom w3-hover-black">Shop Here</button></p>
+
+        <hr class="w3-opacity">
+        <div class="w3-center w3-row">
+          <div class="w3-half w3-content">
+            <button class="w3-button w3-light-grey w3-padding-large  w3-hover-black" onclick="mBtn()">Measurement<br>
+              Form</button>
+          </div>
+          <div class="w3-content w3-half">
+            <button class="w3-button w3-light-grey w3-padding-large w3-padding-left w3-hover-black" onclick="cBtn()">Connect <br>With Us</button>
+          </div>
+        </div>
       </div>
-      <p class="w3-center">Have something super special in mind? Contact us directly in the form below, we love having conversations with our clients!</p>
+      <p class="w3-center">Have something super special in mind? Contact us directly, we love having conversations with our clients!</p>
     </div>
 
-    <!-- Contact section -->
-    <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
-      <div class="w3-content" style="max-width:600px">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6vUdXvuFot65IivLp00WuVqHaXnHUWvSBWfP8gufWAanuAg/viewform?embedded=true" width="600" height="1600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-      </div>
-    </div>
 
     <!-- Footer -->
     <footer class="w3-container w3-padding-32 w3-grey">
@@ -260,8 +249,12 @@
       window.open("https://docs.google.com/forms/d/e/1FAIpQLSdeCT549iCmtLEZH0Gvjcg8M9PblOREsYHh3eJlv2yfiDwUKg/viewform?usp=sf_link");
     }
 
+    function cBtn() {
+      window.open("https://forms.gle/9xDHzXCgLjXWS1j88");
+    }
+
     function etsyBtn() {
-      window.open("www.etsy.com/littlionworkshop")
+      window.open("https://www.etsy.com/shop/LittleLionWorkshop/")
     }
   </script>
 
